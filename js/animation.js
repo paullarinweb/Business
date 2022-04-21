@@ -1,3 +1,2 @@
 // sal scroll animation
-
 sal();
