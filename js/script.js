@@ -15,6 +15,11 @@ testWebP(function (support) {
   }
 });
 
+// loader
+window.onload = function () {
+  $(".loader").addClass("remove");
+};
+
 // popups
 $(".mearch__cards").magnificPopup({
   delegate: "a",
@@ -49,4 +54,27 @@ $(document).ready(() => {
   };
 
   onScrollHeader(); // вызываем основную функцию onScrollHeader
+});
+
+// popups
+
+// Sing in
+let popup1 = $().popup({
+  title: "Sing in",
+  content:
+    '<div class="popup"><form class="popup-form" method="post"><div class="popup-form-div"><label for="text">Full name:</label><input type="text" name="text" id="text" placeholder="Enter your name here..."></div><div class="popup-form-div"><label for="email">Email:</label><input type="email" name="email" id="email" placeholder="Enter your email here..."></div><div class="popup-form-div"><label for="password">Password:</label><input type="password" name="password" id="password" placeholder="Enter your password here..."></div><input class="popup-submit" type="submit" value="Sing in"></form></div>',
+});
+// Sing up
+let popup2 = $().popup({
+  title: "Sing up",
+  content:
+    '<div class="popup"><form class="popup-form" method="post"><div class="popup-form-div"><label for="email">Email:</label><input type="email" name="email" id="email" placeholder="Enter your email here..."></div><div class="popup-form-div"><label for="password">Password:</label><input type="password" name="password" id="password" placeholder="Enter your password here..."></div><input class="popup-submit" type="submit" value="Sing up"></form></div>',
+});
+
+// burger
+$(document).ready(function () {
+  $(".header__burger").click(function (event) {
+    $(".header__burger, .header__menu").toggleClass("active");
+    $("body").toggleClass("lock");
+  });
 });

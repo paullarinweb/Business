@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/loader.css" />
     <link rel="stylesheet" href="css/magnific.css" />
+    <link rel="stylesheet" href="css/popups.css" />
+    <link rel="stylesheet" href="./node_modules/sal.js/dist/sal.css" />
+
     <meta name="description" content="Business " />
     <meta name="keywords" content="Business" />
     <meta name="image" content="./img/item__3.png" />
@@ -21,16 +26,12 @@
     <meta name="format-detection" content="address=no" />
     <meta name="msapplication-TileImage" content="./img/item__3.png" />
     <link rel="preconnect" href="https://fonts.google.com" />
-    <!-- <link rel="icon" href="img/icons/favicon.ico" type="image/x-icon" /> -->
-    <!-- <link
-    rel="shortcut icon"
-    href="img/icons/favicon.ico"
-    type="image/x-icon"
-  /> -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://i.icomoon.io/public/temp/c02903d312/UntitledProject/style.css"
-    /> -->
+    <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="img/favicon/favicon.ico"
+      type="image/x-icon"
+    />
     <link
       href="https://fonts.googleapis.com/css?family=Merriweather:700"
       rel="stylesheet"
@@ -39,10 +40,26 @@
       href="https://fonts.googleapis.com/css?family=Montserrat:regular,500,700"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="https://cdn.jsdelivr.net/gh/filipdutescu/popup-js@master/popup-js.css"
+    />
     <title>Business</title>
   </head>
   <body>
-    <header class="header">
+    <div class="loader">
+      <p>loading in process...</p>
+      <div class="dots-bars-6"></div>
+      <span>please, dont leave before this page load!</span>
+    </div>
+    <header
+      class="header"
+      data-sal-duration="2500"
+      data-sal="fade"
+      data-sal-easing="ease-out-bounce"
+    >
       <div class="header__features _container">
         <div class="header__feat">
           <a href="#"
@@ -100,10 +117,20 @@
                 </button>
                 <ul class="menu__sub-list">
                   <li class="menu__sub-item">
-                    <a class="menu__sub-link" href="#">Sing in</a>
+                    <a
+                      class="menu__sub-link"
+                      onclick="popup1.openPopup()"
+                      href="#"
+                      >Sing in</a
+                    >
                   </li>
                   <li class="menu__sub-item">
-                    <a class="menu__sub-link" href="#">Sing up</a>
+                    <a
+                      class="menu__sub-link"
+                      onclick="popup2.openPopup()"
+                      href="#"
+                      >Sing up</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -126,10 +153,26 @@
             </a>
           </div>
         </div>
+
+        <!-- burger-menu -->
+        <div class="header__burger">
+          <span></span>
+        </div>
+        <nav class="header__menu">
+          <ul class="header__list">
+            <li><a href="auth.html" class="header__link">Sing in</a></li>
+            <li><a href="auth.html" class="header__link">Sing up</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
     <section class="intro">
-      <div class="intro__info intro__info__container">
+      <div
+        class="intro__info intro__info__container"
+        data-sal-duration="2000"
+        data-sal="slide-up"
+        data-sal-easing="ease-out-bounce"
+      >
         <div class="intro__info__block">
           <div class="intro__info__wrapper">
             <h1 class="intro__block__h h">
@@ -141,7 +184,7 @@
               id eget scelerisque amet etiam in sit commodo. Pretium ut duis
               orci pulvinar pretium id consectetur.
             </p>
-            <button class="intro__btn btn">
+            <a href="https://youtu.be/dQw4w9WgXcQ" class="intro__btn btn">
               <svg
                 class="world__svg"
                 width="24"
@@ -156,7 +199,7 @@
                 />
               </svg>
               <span>Explore</span>
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -165,7 +208,12 @@
 
     <section class="features _container">
       <div class="features___items">
-        <div class="features___item">
+        <div
+          class="features___item"
+          data-sal-duration="2000"
+          data-sal="slide-up"
+          data-sal-easing="ease-out-bounce"
+        >
           <picture
             ><source srcset="img/item__1.webp" type="image/webp" />
             <img src="img/item__1.png" alt=""
@@ -182,7 +230,12 @@
             structure</span
           >
         </div>
-        <div class="features___item">
+        <div
+          class="features___item"
+          data-sal-duration="2000"
+          data-sal="slide-up"
+          data-sal-easing="ease-out-bounce"
+        >
           <picture
             ><source srcset="img/item__2.webp" type="image/webp" />
             <img src="img/item__2.png" alt=""
@@ -199,7 +252,12 @@
             to your structure</span
           >
         </div>
-        <div class="features___item">
+        <div
+          class="features___item"
+          data-sal-duration="2000"
+          data-sal="slide-up"
+          data-sal-easing="ease-out-bounce"
+        >
           <picture
             ><source srcset="img/item__3.webp" type="image/webp" />
             <img src="img/item__3.png" alt=""
@@ -220,11 +278,21 @@
     </section>
 
     <section class="preference _container">
-      <div class="preference__title">
+      <div
+        class="preference__title"
+        data-sal-duration="2000"
+        data-sal="slide-up"
+        data-sal-easing="ease-out-bounce"
+      >
         Making your facility known is our priority
       </div>
       <div class="preference__items">
-        <div class="preference__item">
+        <div
+          class="preference__item"
+          data-sal-duration="2000"
+          data-sal="slide-up"
+          data-sal-easing="ease-out-bounce"
+        >
           <div class="preference__info">
             <svg
               class="task_svg"
@@ -248,7 +316,12 @@
           </div>
           <button class="preference__btn btn">Show me more</button>
         </div>
-        <div class="preference__item">
+        <div
+          class="preference__item"
+          data-sal-duration="2000"
+          data-sal="slide-up"
+          data-sal-easing="ease-out-bounce"
+        >
           <div class="preference__info">
             <svg
               class="grammar_svg"
@@ -272,7 +345,12 @@
           </div>
           <button class="preference__btn btn">Show me more</button>
         </div>
-        <div class="preference__item">
+        <div
+          class="preference__item"
+          data-sal-duration="2000"
+          data-sal="slide-up"
+          data-sal-easing="ease-out-bounce"
+        >
           <div class="preference__info">
             <svg
               class="frame_svg"
@@ -299,7 +377,12 @@
           </div>
           <button class="preference__btn btn">Show me more</button>
         </div>
-        <div class="preference__item">
+        <div
+          class="preference__item"
+          data-sal-duration="2000"
+          data-sal="slide-up"
+          data-sal-easing="ease-out-bounce"
+        >
           <div class="preference__info">
             <svg
               class="calendar_svg"
@@ -327,7 +410,12 @@
 
     <section class="mearch _container">
       <div class="mearch__items">
-        <div class="mearch__info">
+        <div
+          class="mearch__info"
+          data-sal-duration="2000"
+          data-sal="slide-up"
+          data-sal-easing="ease-out-bounce"
+        >
           <h2 class="mearch__info_h h">
             Join the community campervan sites managers.
           </h2>
@@ -353,7 +441,13 @@
           </a>
         </div>
         <div class="mearch__cards">
-          <a class="mearch__popup__img" href="./img/mearch__1.png">
+          <a
+            class="mearch__popup__img"
+            href="./img/mearch__1.png"
+            data-sal-duration="2000"
+            data-sal="slide-up"
+            data-sal-easing="ease-out-bounce"
+          >
             <div class="mearch__card">
               <picture
                 ><source srcset="img/mearch__1.webp" type="image/webp" />
@@ -365,7 +459,13 @@
             </div>
           </a>
 
-          <a class="mearch__popup__img" href="./img/mearch__2.png">
+          <a
+            class="mearch__popup__img"
+            href="./img/mearch__2.png"
+            data-sal-duration="2000"
+            data-sal="slide-up"
+            data-sal-easing="ease-out-bounce"
+          >
             <div class="mearch__card">
               <picture
                 ><source srcset="img/mearch__2.webp" type="image/webp" />
@@ -377,7 +477,13 @@
             </div>
           </a>
 
-          <a class="mearch__popup__img" href="./img/mearch__3.png">
+          <a
+            class="mearch__popup__img"
+            href="./img/mearch__3.png"
+            data-sal-duration="2000"
+            data-sal="slide-up"
+            data-sal-easing="ease-out-bounce"
+          >
             <div class="mearch__card">
               <picture
                 ><source srcset="img/mearch__3.webp" type="image/webp" />
@@ -392,9 +498,21 @@
       </div>
     </section>
     <section class="advantages _container">
-      <div class="advantages__title">Our Advantages</div>
+      <div
+        class="advantages__title"
+        data-sal-duration="2000"
+        data-sal="slide-up"
+        data-sal-easing="ease-out-bounce"
+      >
+        Our Advantages
+      </div>
       <div class="advantages__items">
-        <div class="advantages__item">
+        <div
+          class="advantages__item"
+          data-sal-duration="2000"
+          data-sal="slide-up"
+          data-sal-easing="ease-out-bounce"
+        >
           <div class="advantages__info">
             <svg
               class="item__svg"
@@ -419,7 +537,12 @@
             </p>
           </div>
         </div>
-        <div class="advantages__item">
+        <div
+          class="advantages__item"
+          data-sal-duration="2000"
+          data-sal="slide-up"
+          data-sal-easing="ease-out-bounce"
+        >
           <div class="advantages__info">
             <svg
               class="news_svg"
@@ -445,7 +568,12 @@
             </p>
           </div>
         </div>
-        <div class="advantages__item">
+        <div
+          class="advantages__item"
+          data-sal-duration="2000"
+          data-sal="slide-up"
+          data-sal-easing="ease-out-bounce"
+        >
           <div class="advantages__info">
             <svg
               class="search_svg"
@@ -486,11 +614,21 @@
 
     <footer class="footer">
       <div class="footer__items">
-        <div class="footer__item__left">
+        <div
+          class="footer__item__left"
+          data-sal-duration="2000"
+          data-sal="slide-up"
+          data-sal-easing="ease-out-bounce"
+        >
           <h4 class="footer__left_text h">Easy Camper</h4>
           <h2 class="footer__left_h h">When Passion Meets Comfort.</h2>
         </div>
-        <div class="footer__item__right">
+        <div
+          class="footer__item__right"
+          data-sal-duration="2000"
+          data-sal="slide-up"
+          data-sal-easing="ease-out-bounce"
+        >
           <div class="footer__nav">
             <h4 class="footer__nav_h h">Discover the Network</h4>
             <ul>
@@ -519,7 +657,12 @@
           </div>
         </div>
       </div>
-      <div class="footer__under">
+      <div
+        class="footer__under"
+        data-sal-duration="2000"
+        data-sal="fade"
+        data-sal-easing="ease-out-bounce"
+      >
         <div class="footer__under__items">
           <div class="footer__under__left">
             <div class="footer__copy">
@@ -546,6 +689,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/filipdutescu/popup-js/popup-js.js"
+    ></script>
+    <script src="../node_modules/sal.js/dist/sal.js"></script>
+    <script src="js/animation.js"></script>
     <script src="js/magnific.js"></script>
     <script src="js/script.js"></script>
   </body>
